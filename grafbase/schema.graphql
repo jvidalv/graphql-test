@@ -1,39 +1,11 @@
-type Product @model {
+type TodoList @model {
   id: ID!
-  sku: String!
-  name: String! 
-  description: String
-  price: Float!
-  stock: Int!
+  title: String!
+  todos: [Todo]
 }
 
-type Query {
-  products: [Product]!
-  product(id: ID!): Product
-}
-
-type Mutation {
-  productCreate(input: ProductCreateInput!): ProductPayload
-  productUpdate(input: ProductUpdateInput!): ProductPayload
-  productDelete(id: ID!): Product
-}
-
-type Product @model {
+type Todo @model {
   id: ID!
-  sku: String!
-  name: String! 
-  description: String
-  price: Float!
-  stock: Int!
-}
-
-type Query {
-  products: [Product]!
-  product(id: ID!): Product
-}
-
-type Mutation {
-  productCreate(input: ProductCreateInput!): ProductPayload
-  productUpdate(input: ProductUpdateInput!): ProductPayload
-  productDelete(id: ID!): Product
+  title: String!
+  complete: Boolean
 }
