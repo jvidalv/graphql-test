@@ -1,9 +1,13 @@
-type Product @model {
+type TodoList @model {
   id: ID!
-  sku: String!
-  name: String! 
-  description: String
-  price: Float!
-  stock: Int!
-  test: Int!
+  title: String!
+  date: String!
+  todos: [Todo]
+}
+
+type Todo @model {
+  id: ID!
+  title: String!
+  date: String!
+  complete: Boolean
 }
