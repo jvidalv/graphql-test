@@ -1,13 +1,13 @@
 type TodoList @model {
   id: ID!
   title: String!
-  date: String!
+  date: Boolean!
   todos: [Todo]
 }
 
 type Todo @model {
   id: ID!
   title: String!
-  date: String!
+  date: Boolean!
   complete: Boolean
 }
