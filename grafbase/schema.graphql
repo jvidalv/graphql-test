@@ -1,11 +1,11 @@
 type TodoList @model {
   id: ID!
-  title: String!
+  title: Number!
   todos: [Todo]
 }
 
 type Todo @model {
   id: ID!
-  title: String!
+  title: Number!
   complete: Boolean
 }
