@@ -15,4 +15,6 @@ type Todo @model {
     id: ID!
     title: String!
     complete: Boolean
+    list: TodoList!
+    user: User!
 }
