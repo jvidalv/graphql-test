@@ -1,10 +1,3 @@
-type User @model {
-    id: ID!
-    email : String!
-    username: String!
-    avatarUrl : String
-}
-
 type TodoList @model {
     id: ID!
     title: String!
@@ -16,5 +9,4 @@ type Todo @model {
     title: String!
     complete: Boolean
     list: TodoList!
-    user: User!
 }
