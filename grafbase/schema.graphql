@@ -1,7 +1,7 @@
 type TodoList @model {
     id: ID!
     title: String!
-    todos: [Todo]
+    todos: [Todo] @break
 }
 
 type Todo @model {
