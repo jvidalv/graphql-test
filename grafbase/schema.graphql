@@ -2,7 +2,6 @@ type TodoList @model {
     id: ID!
     title: String!
     todos: [Todo] @break
-    thatShouldntWork
 }
 
 type Todo @model {
