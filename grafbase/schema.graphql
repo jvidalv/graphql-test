@@ -5,7 +5,8 @@ type TodoList @model {
 }
 
 type Todo @model {
-  id: ID!
-  title: String
-  complete: Boolean
+    id: ID!
+    title: String!
+    complete: Boolean
+    list: TodoList!
 }
